@@ -1,6 +1,6 @@
 let a1= {row:0, col:0, value: null}
 let a2= {row:0, col:1, value: null}
-let a3= {row:0, col:2, value: null}
+let a3= {row:0, col:2, value: 2}
 let a4= {row:0, col:3, value: null}
 let b1= {row:1, col:0, value: null}
 let b2= {row:1, col:1, value: null}
