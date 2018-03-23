@@ -1,19 +1,7 @@
-const board = require('./board')
-
-let FreeSquares = board.filter(square=>
-    square.value == null
-    )
-
-function spawnNumber(){
-  var square = FreeSquares[Math.floor(Math.random()*FreeSquares.length)]
-  square.value = 2
-  return square
-}
-
-function moveValues(direction){
+export function moveValues(direction, board){
   let dir = takeDirection(direction)[0]
   let rev = takeDirection(direction)[1]
-  let Rows = getRows(dir, rev)
+  let Rows = getRows(dir, rev, board)
 
   Rows.map(row => {
     row.map((square, idx, array)=>{
@@ -35,7 +23,7 @@ function moveValues(direction){
   })
 }
 
-function getRows(dir, rev){
+export function getRows(dir, rev, board){
   let Rows = []
   if(rev){
     for(let i = 0; i <= 3; i++){
@@ -50,7 +38,7 @@ function getRows(dir, rev){
   return Rows
 }
 
-function takeDirection(direction){
+export function takeDirection(direction){
   if (direction == 'left'){
     return ['row', true]
   }
