@@ -1,4 +1,4 @@
-export function moveValues(direction, board){
+function moveValues(direction, board){
   let dir = takeDirection(direction)[0]
   let rev = takeDirection(direction)[1]
   let Rows = getRows(dir, rev, board)
@@ -21,9 +21,10 @@ export function moveValues(direction, board){
         }
     })
   })
+  return board
 }
 
-export function getRows(dir, rev, board){
+function getRows(dir, rev, board){
   let Rows = []
   if(rev){
     for(let i = 0; i <= 3; i++){
@@ -38,7 +39,7 @@ export function getRows(dir, rev, board){
   return Rows
 }
 
-export function takeDirection(direction){
+function takeDirection(direction){
   if (direction == 'left'){
     return ['row', true]
   }
@@ -52,3 +53,5 @@ export function takeDirection(direction){
     return ['col', false]
   }
 }
+
+module.exports= moveValues

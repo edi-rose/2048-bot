@@ -4,10 +4,7 @@
   "description": "coolest game eva",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
-    "start": "node server & webpack --watch",
-    "postinstall": "yarn webpack",
-    "dev": "nodemon server & webpack --watch"
+    "test": "jest --watchAll"
   },
   "babel": {
     "presets": [
@@ -24,11 +21,8 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "express": "^4.16.2",
-    "heroku": "^0.2.0",
     "nodemon": "^1.14.12",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "webpack": "^3.11.0"
+    "react-dom": "^16.2.0"
   }
 }
